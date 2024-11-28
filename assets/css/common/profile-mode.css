@@ -41,3 +41,50 @@
 .button:active {
     transform: scale(0.96);
 }
+
+/* Ensure the profile container spans the full width */
+.profile_container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto; /* Center the container */
+    align-items: flex-start; /* Align items to the top */
+}
+
+/* Left column styling */
+.profile_left {
+    flex: 0 0 auto;
+    margin-right: 20px; /* Space between columns */
+}
+
+/* Right column styling */
+.profile_right {
+    flex: 1;
+}
+
+/* Ensure images and content fit within their columns */
+.profile_left img,
+.profile_right img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Adjust text alignment if necessary */
+.profile_left,
+.profile_right {
+    text-align: left;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .profile_container {
+        flex-direction: column;
+    }
+    .profile_left,
+    .profile_right {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
